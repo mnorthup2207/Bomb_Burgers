@@ -6,7 +6,7 @@ const burger = {
     all: function(cb) {
         //orm.all(tableName, cb)
         orm.all("burgers", function(res){
-            cd(res);
+            cb(res);
         });
     },
     // cat.create(["name", "devoured"], ["Blue Ribbon Burger", "1"], cb)
