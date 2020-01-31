@@ -1,0 +1,19 @@
+<ul>
+    <div class="row">
+    {{#each burgers}}
+        <li>
+            <p>{{id}} {{burger}}</p>
+        </li>
+        <button data-id="{{id}}" class="delBurger">Delete</button>
+    </div>
+</ul>
+
+
+
+<form action="create-form">
+    <div class="form-group">
+        <input type="text" id="auth" name="burger">
+        <label for="auth">Enter a Burger you want to DEVOUR, Click the "Submit" button to add!</label>
+        <button type="submit">Submit</button>
+    </div>
+</form>

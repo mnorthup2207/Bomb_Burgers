@@ -19,6 +19,7 @@
   "homepage": "https://github.com/mnorthup2207/Bomb_Burgers#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
     "handlebars": "^4.7.2",
     "mysql": "^2.18.1"
   }
