@@ -1,18 +1,20 @@
-# Employee_Tracking_CMS
+# Bomb Burgers
 
 ## Function 
-- This Employee Tracking CLI app uses a MySQL server and communicates with the client through the Inquirer NPM. This application makes a CRUD (creating, read, update, and delete) functional app. The application allows you to enter new employees, update roles, delete employees, and view all current employees, managers, and departments.  
+- The function of this application is to develop a fully functional CRUD application with custom built ORM's and utilizing node.js, express.js, mysql, and handle bars. 
  
-![image](assets/CLI.png) 
+![image](assets/img/landing.png) 
 
 ## Intended Use
-- This application is created with the small to moderate sized company, looking for a light weight framework for their HR database. Easily update, view, and manage all employees from one command line application.
+- The intended use of this application is a proof of concept for custom a custom ORM application. This application uses several handoffs running from the frontend to the backend and back to the frontend. 
 
 ## List of links/dependencies
 - mysql
 - https://www.npmjs.com/package/inquirer
-- inquirer
-- https://www.npmjs.com/package/mysql 
+- express-handlebars
+- https://www.npmjs.com/package/express-handlebars
+- Express 
+- https://www.npmjs.com/package/express
 
 Deployed URL
 - 
