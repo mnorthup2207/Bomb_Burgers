@@ -1,26 +1,29 @@
-<h1>Bomb Burgers!!!!</h1>
+<div class="row">
+    <div class="col-md-6">
+        <h2>Burgers Left to Eat!</h2>
 
-<h2>Burgers Left to Eat!</h2>
+        <ul>
+            {{#each burgers}}
+            {{!-- unless is used for when things are falsey --}}
+            {{#unless devoured}}
+            {{> burgers/burger-block devour=true}}
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+    <div class="col-md-6">
+    <h2>Burgers That Have Been Devoured!</h2>
 
-<ul>
-    {{#each burgers}}
-    {{!-- unless is used for when things are falsey --}}
-    {{#unless devoured}}
-    {{> burgers/burger-block devour=true}}
-    {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Burgers That Have Been Devoured!</h2>
-
-<ul>
-    {{#each burgers}}
-    {{!-- if is used when things are truthy --}}
-    {{#if devoured}}
-    {{> burgers/burger-block devour=false}}
-    {{/if}}
-    {{/each}}
-</ul>
+    <ul>
+        {{#each burgers}}
+        {{!-- if is used when things are truthy --}}
+        {{#if devoured}}
+        {{> burgers/burger-block devour=false}}
+        {{/if}}
+        {{/each}}
+    </ul>
+    </div>
+</div>
 
 <h2>Add a Burger</h2>
 <form class="create-form">
