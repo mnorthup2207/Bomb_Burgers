@@ -1,3 +1,9 @@
+body{
+    background-color: orange;
+}
+.burgerPic{
+    width: 200px;
+}
 li {
   padding: 5px;
   margin: 5px;
