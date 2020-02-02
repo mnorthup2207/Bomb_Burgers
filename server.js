@@ -1,28 +1,29 @@
-const express = require("express");
+var express = require("express");
 
-const PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8080;
 
-const app = express();
+var app = express();
 
-//serve static content for the app from the public directory in the application directory
+// Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
-// Sets up the Express app to handle data parsing
+// Parse application body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// require the handlebars package
-const exphbs = require("express-handlebars");
+// Set Handlebars.
+var exphbs = require("express-handlebars");
 
-// makes the package utilizable and able to pass data through it
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// makes the controllers functions possible through routes
-const routes = require("./controllers/burgers_controller.js");
+// Import routes and give the server access to them.
+var routes = require("./controllers/burgersController.js");
+
 app.use(routes);
 
+// Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
-    // Log (server-side) when our server has started
-    console.log("Server listening on: http://localhost:" + PORT);
-  });
+  // Log (server-side) when our server has started
+  console.log("Server listening on: http://localhost:" + PORT);
+});

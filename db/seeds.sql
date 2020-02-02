@@ -4,4 +4,3 @@ VALUES ("Bacon Burger", false)
 ,("Blue Cheese Crumble Burger", false)
 ,("Onion Straw Burger",false)
 ,("Country Pound Burger", false);
-

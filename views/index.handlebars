@@ -1,20 +1,40 @@
+<h1>Bomb Burgers!!!!</h1>
+
+<h2>Burgers Left to Eat!</h2>
+
 <ul>
-    <div class="row">
     {{#each burgers}}
-        <li>
-            <p>{{id}} {{burger}}</p>
-        </li>
-        <button data-id="{{id}}" class="delBurger">Delete</button>
+    {{!-- unless is used for when things are falsey --}}
+    {{#unless devoured}}
+    {{> burgers/burger-block devour=true}}
+    {{/unless}}
     {{/each}}
-    </div>
 </ul>
 
+<h2>Burgers That Have Been Devoured!</h2>
 
+<ul>
+    {{#each burgers}}
+    {{!-- if is used when things are truthy --}}
+    {{#if devoured}}
+    {{> burgers/burger-block devour=false}}
+    {{/if}}
+    {{/each}}
+</ul>
 
-<form action="create-form">
+<h2>Add a Burger</h2>
+<form class="create-form">
+
     <div class="form-group">
-        <input type="text" id="auth" name="burger">
-        <label for="auth">Enter a Burger you want to DEVOUR, Click the "Submit" button to add!</label>
-        <button type="submit">Submit</button>
+        <label for="ca">Burger Name:</label>
+        <input type="text" id="ca" name="name">
     </div>
+
+    <div class="form-group">
+        <label for="sleepy">Devoured?</label><br>
+        <input type="radio" name="devoured" value="1" checked> Devoured?<br>
+        <input type="radio" name="devoured" value="0"> Need To NumNum!
+    </div>
+
+    <button type="submit">Add Burger</button>
 </form>
